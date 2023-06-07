@@ -1,0 +1,22 @@
+0:
+  name: ${amount}
+  give_command:
+  - console= cmi money give %cp-player-name% {amount}
+  message_command: msg= You got {name}
+  material: STONE
+  repeats: 2
+  initial_amount: 100
+  maximum_amount: 1000
+  steps: 100
+  reward_type: IGC
+1:
+  name: ${amount}
+  give_command:
+  - console= cmi money give %cp-player-name% {amount}
+  - console= give restedwicked a high five
+  material: STONE
+  repeats: 2
+  initial_amount: 1000
+  maximum_amount: 3000
+  steps: 1000
+  reward_type: IGC

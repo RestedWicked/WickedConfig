@@ -4,7 +4,7 @@ panels:
     rows: DROPPER
     title: '&8Rusty Lootbox'
     commands-on-open:
-    - console= bpa progress quest %cp-player-name% 2 1 1
+    - console= Hi
     panelType:
     - unclosable
     - nocommand
@@ -15,13 +15,13 @@ panels:
         commands:
         - set-data= chance %cp-random-1,133%
         has0:
-          value0: '1'
+          value0: 1
           compare0: '%cp-data-chance%'
           material: Stone
-          stack: '1'
+          stack: 1
           name: '&fClick to get!'
           commands:
           - set-data chance 0
-          - msg- &fYou got $100
+          - msg= &fYou got $100
           - console= cmi money give %cp-player-name% 100
           - cpc

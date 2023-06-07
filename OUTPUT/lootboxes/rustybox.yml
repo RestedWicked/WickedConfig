@@ -1,0 +1,17 @@
+lootbox_type: Standard
+chance_command: set-data= chance %cp-random-1,1%
+perm: default
+rows: DROPPER
+title: '&8Rusty Lootbox'
+panelType:
+- unclosable
+- nocommand
+lootbox_slot: '4'
+lootbox_material: STONE
+material_name: '&fClick to Open!'
+open_material_name: '&fClick to get!'
+items:
+  1:
+    name: "${amount}"
+    commands:
+    - console= cmi money give %cp-player-name% {amount}
