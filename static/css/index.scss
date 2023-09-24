@@ -1,4 +1,11 @@
 $wicked_cyan: #B9FFF2;
+$rested_cyan: #0FB894;
+$wicked_red: #FF0C63;
+$rested_red: #CC094F;
+$wicked_blue: #0C8AFF;
+$rested_blue: #0954CC;
+$wicked_bg: #101418;
+$rested_fg: #FFF9EB;
 
 @font-face {
   font-family: "ProFont";
@@ -9,5 +16,42 @@ $wicked_cyan: #B9FFF2;
 
 body {
   font-family: "ProFont";
-  background-color: $wicked_cyan;
+  font-size: 100%;
+  font-weight: normal;
+  color: $rested_fg;
+  background-color: $wicked_bg;
+  margin: 0;
+}
+
+header {
+  color: $wicked_bg;
+  background-color: $rested_fg;
+  margin: 0;
+  padding: 3em;
+  h1 {
+    font-size: 3em;
+    margin: inherit;
+  }
+}
+
+.generator {
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  
+  h2 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  button {
+    font-family: inherit;
+    font-size: 2.5em;
+    color: $rested_fg;
+    background-color: $wicked_bg;
+    padding: 0.5em;
+    border: 2px solid $rested_fg;
+  }
 }

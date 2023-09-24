@@ -7,6 +7,7 @@ enum Route {
     Home,
     #[at("/lootbox")]
     Lootbox,
+    #[not_found]
     #[at("/404")]
     NotFound,
 }
@@ -30,7 +31,7 @@ fn home() -> Html {
     let onclick = Callback::from(move |_| navigator.push(&Route::Lootbox));
     html! {
         <div>
-            <h1>{ "SurvivalQuest Admin Tools" }</h1>
+            <Heading />
             <button {onclick}>{ "Lootbox Generator" }</button>
         </div>
     }
@@ -43,8 +44,11 @@ fn lootbox() -> Html {
     let onclick = Callback::from(move |_| navigator.push(&Route::Home));
     html! {
         <div>
-            <h1>{ "Lootbox Generator" }</h1>
-            <button {onclick}>{ "Home" }</button>
+            <Heading />
+            <div class={classes!("generator")}>
+                <h2>{ "Lootbox Generator" }</h2>
+                <button {onclick}>{ "Home" }</button>
+            </div>
         </div>
     }
 }
@@ -56,5 +60,17 @@ pub fn App() -> Html {
         <BrowserRouter>
             <Switch<Route> render={switch} />
         </BrowserRouter>
+    }
+}
+
+// Template Items
+
+#[function_component(Heading)]
+fn heading() -> Html {
+
+    html! {
+        <header>
+            <h1> { "SurvivalQuest Admin Tools" } </h1>
+        </header>
     }
 }
