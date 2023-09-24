@@ -1,0 +1,13 @@
+$wicked_cyan: #B9FFF2;
+
+@font-face {
+  font-family: "ProFont";
+  src: url('ProFont.ttf');
+  src: url('ProFont.ttf') format('truetype')
+}
+
+
+body {
+  font-family: "ProFont";
+  background-color: $wicked_cyan;
+}
