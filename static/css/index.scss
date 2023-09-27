@@ -12,6 +12,11 @@ $rested_fg: #FFF9EB;
   src: url('ProFont.ttf');
   src: url('ProFont.ttf') format('truetype')
 }
+@font-face {
+  font-family: "Minecraftia";
+  src: url('Minecraftia-Regular.ttf');
+  src: url('Minecraftia-Regular.ttf') format('truetype')
+}
 
 
 body {
@@ -35,10 +40,11 @@ header {
 }
 
 .generator {
-  padding: 3rem;
+  margin: 1rem;
+  padding: 2rem;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   
   h2 {
     font-size: 2.5rem;
@@ -53,5 +59,40 @@ header {
     background-color: $wicked_bg;
     padding: 0.5em;
     border: 2px solid $rested_fg;
+
+    &:hover {
+      color: $wicked_bg;
+      background-color: $rested_fg;
+    }
+  }
+}
+
+form {
+  margin: 3rem;
+  padding: 2rem;
+  border: 2px solid $rested_fg;
+  
+  ul {
+    padding: 0;
+    list-style-type: none;
+        
+    li {
+      display: flex;
+      flex-direction: column;
+      
+      label {
+        font-size: 1.5rem;
+      }
+
+      input {
+        font-family: ProFont;
+        font-size: 1.5rem;
+        color: $wicked_bg;
+        background-color: $rested_fg;
+        border: 7px double $wicked_bg;
+        padding: 0.5rem;
+
+      }
+    }
   }
 }

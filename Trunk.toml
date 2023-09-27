@@ -1,5 +1,5 @@
 [build]
-target = "./static/html/index.html"
+target = "./index.html"
 
 [serve]
 address = "192.168.4.117"
