@@ -895,6 +895,8 @@ dependencies = [
  "linked-hash-map",
  "serde",
  "serde_yaml",
+ "wasm-bindgen",
+ "web-sys",
  "yew",
  "yew-router",
 ]

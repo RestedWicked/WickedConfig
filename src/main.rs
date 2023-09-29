@@ -1,7 +1,7 @@
-mod app;
+mod utils;
 mod pages;
 
-use app::App;
+use crate::utils::app::App;
 
 fn main() {
     yew::Renderer::<App>::new().render();

@@ -1,4 +1,4 @@
-use crate::app::routes::Route;
+use crate::utils::routes::Route;
 use crate::pages::components::heading::Heading;
 
 use yew::{ Html, html, function_component, Callback};

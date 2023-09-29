@@ -7,6 +7,27 @@ $rested_blue: #0954CC;
 $wicked_bg: #101418;
 $rested_fg: #FFF9EB;
 
+$minecraft_border: #2C0863;
+$minecraft_background: #170D1C;
+
+$minecraft_black: #000000;
+$minecraft_blue: #0000AA;
+$minecraft_green: #00AA00;
+$minecraft_cyan: #00AAAA;
+$minecraft_red: #AA0000;
+$minecraft_pink: #AA00AA;
+$minecraft_yellow: #FFAA00;
+$minecraft_white: #AAAAAA;
+$minecraft_bright_black: #555555;
+$minecraft_bright_blue: #5555FF;
+$minecraft_bright_green: #55FF55;
+$minecraft_bright_cyan: #55FFFF;
+$minecraft_bright_red: #FF5555;
+$minecraft_bright_pink: #FF55FF;
+$minecraft_bright_yellow: #FFFF55;
+$minecraft_bright_white: #FFFFFF;
+
+
 @font-face {
   font-family: "ProFont";
   src: url('ProFont.ttf');
@@ -89,9 +110,19 @@ form {
         font-size: 1.5rem;
         color: $wicked_bg;
         background-color: $rested_fg;
-        border: 7px double $wicked_bg;
+        border: 6px double $wicked_bg;
         padding: 0.5rem;
 
+      }
+
+      #lootbox_name_preview {
+        font-family: Minecraftia;
+        font-size: 1.5rem;
+        height: 2rem;
+        color: $minecraft_pink;
+        background-color: $minecraft_background;
+        border: 3px solid $minecraft_border;
+        padding: 0.5rem;
       }
     }
   }
