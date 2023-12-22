@@ -2,7 +2,7 @@ use crate::utils::routes::Route;
 use crate::pages::components::heading::Heading;
 use crate::pages::components::text_input::TextInput;
 
-use yew::{ Html, html, function_component, Callback, classes, use_state, SubmitEvent};
+use yew::{ Html, html, function_component, Callback, classes, SubmitEvent};
 use yew_router::hooks::use_navigator;
 
 #[function_component(Lootbox)]
@@ -24,12 +24,6 @@ pub fn lootbox() -> Html {
 
 #[function_component(LootboxForm)]
 fn lootbox_form() -> Html {
-    let preview_lootbox_name = use_state(|| "Preview".to_owned());
-    let cloned_lootbox_name = preview_lootbox_name.clone();
-    let lootbox_name_onchange = Callback::from(move |lootbox_name| {
-        cloned_lootbox_name.set(lootbox_name);
-    });
-
     let onsubmit = Callback::from(move |event: SubmitEvent| {
         event.prevent_default();
     });
@@ -37,8 +31,14 @@ fn lootbox_form() -> Html {
     html! {
         <form onsubmit={onsubmit}>
             <ul>
-                <TextInput name="lootbox_name" label="Lootbox Name" handlechange={lootbox_name_onchange} />
-                <li><p id="lootbox_name_preview"> { &*preview_lootbox_name } </p></li>
+                <li>
+                    <ul class={classes!("inline-textinput")}>
+                        <TextInput name="lootbox_name" label="Lootbox Name"/>
+                        <TextInput name="panel_name" label="Panel Name"/>
+                    </ul>
+                </li>
+                <TextInput name="opening_stages" label="Opening Stages"/>
+                <TextInput name="material_type" label="Material Type"/>
             </ul>
         </form>
     }
